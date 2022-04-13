@@ -105,22 +105,22 @@
 \addtolength{\hlwmpad}{-16pt}
 
 
-\begin{tabularx}{\linewidth}{p{\hlwmpad} >{\raggedleft\arraybackslash}X}
+% here I suppose 4pt would be more consistent, but 3 looks more consistent and that's what counts :)
+\begin{tabularx}{\linewidth}{p{\hlwmpad} >{\raggedleft\arraybackslash}X@{\hspace{-3pt}}}
 % \begin{tabularx}{\linewidth}{p{\hlwmpad} >{\centering\arraybackslash}X}
     \adjustbox{valign=t}{\makecell[l]{
         \makebox[1\linewidth][l]{\spaceout{\huge \textbf{Richard Westerhof}}} \\
-        {\color{gray} Geboortedatum} \hfill 26-07-1999 \\
-        {\color{gray} Woonplaats} \hfill Heerenveen \\
-        {\color{gray} Email} \hfill \email{richardswesterhof@gmail.com} \\ 
-        {\color{gray} Website} \hfill \href{https://richardswesterhof.github.io}{richardswesterhof.github.io} \\
-        {\color{gray} LinkedIn} \hfill \href{https://linkedin.com/in/richardswesterhof}{richardswesterhof} \\
-        {\color{gray} GitHub} \hfill \href{https://github.com/richardswesterhof}{richardswesterhof}
+        {\color{gray} Geboortedatum} \hfill 26-07-1999 \hspace{0.01cm}\\
+        {\color{gray} Woonplaats} \hfill Heerenveen \hspace{0.01cm}\\
+        {\color{gray} Email} \hfill \email{richardswesterhof@gmail.com} \hspace{0.01cm}\\ 
+        {\color{gray} Website} \hfill \href{https://richardswesterhof.github.io}{richardswesterhof.github.io} \hspace{0.01cm}\\
+        {\color{gray} LinkedIn} \hfill \href{https://linkedin.com/in/richardswesterhof}{richardswesterhof} \hspace{0.01cm}\\
+        {\color{gray} GitHub} \hfill \href{https://github.com/richardswesterhof}{richardswesterhof} \hspace{0.01cm}\\
     }} &
     \adjustbox{valign=t}{
-        % \adjincludegraphics[height=3.8cm, trim={{0.15\width} {0.1\height} {0.15\width} {0.22\height}}, clip]{profiel_afbeelding.jpg}
         % code adjusted from https://tex.stackexchange.com/a/511832
         \begin{tikzpicture}
-            \clip (0,0)  circle (2cm) ;
+            \clip (0,0)  circle (1.83cm) ;
             %adjust this coordinate to move image
             \node[anchor=center] at (0,-1)
             % the width here basically controls the zoom
@@ -133,7 +133,8 @@
 
 
 \section*{Opleidingen}
-\hspace{4pt}\begin{tabularx}{\lwmpad}{lXlcr}
+% \hspace{4pt}
+\begin{tabularx}{\linewidth}{lXlcr}
     \makecell[tl]{\large Master Computing Science\\\color{gray} Rijksuniversiteit Groningen} & & sep. 2020 & ~~-~~ & heden \\
     \rule{0pt}{0.69cm}\makecell[tl]{\large Bachelor Computing Science\\\color{gray} Rijksuniversiteit Groningen} & & sep. 2017 & ~~-~~ & jul. 2020 \\
     \rule{0pt}{0.69cm}\makecell[tl]{\large Gymnasium\\\color{gray} OSG Sevenwolden, Heerenveen} & & aug. 2011 & ~~-~~ & jul. 2017 \\
@@ -143,27 +144,28 @@
 
 
 \section*{Vaardigheden}
-\hspace{4pt}\begin{tabularx}{\lwmpad}{p{\hlwmpad} X p{\hlwmpad}}
+% \hspace{4pt}
+\begin{tabularx}{\linewidth}{p{\hlwmpad} X p{\hlwmpad}}
 % for some reason a tabularx inside another tabularx needs to be enclosed in {}, I don't understand latex well enough to know why :)
-    {\begin{tabularx}{\linewidth}[t]{l X r l}
-        \adjustbox{valign=t}{\large Java} & & \adjustbox{valign=t}{\skill{4}} & 
+    {\begin{tabularx}{\linewidth}[t]{l X r@{\hspace{-4pt}}}
+        \adjustbox{valign=t}{\large Java} & & \adjustbox{valign=t}{\skill{4}}
         \\
-        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Kotlin} & & \adjustbox{valign=t}{\skill{4}} &
+        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Kotlin} & & \adjustbox{valign=t}{\skill{4}}
         \\
-        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large JavaScript} & & \adjustbox{valign=t}{\skill{4}} &
+        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large JavaScript} & & \adjustbox{valign=t}{\skill{4}}
         \\
-        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Python} & & \adjustbox{valign=t}{\skill{3}} & 
+        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Python} & & \adjustbox{valign=t}{\skill{3}}
         \\
     \end{tabularx}}
     & &
-    {\begin{tabularx}{\linewidth}[t]{l X r l}
-        \adjustbox{valign=t}{\large Docker} & & \adjustbox{valign=t}{\skill{3}} & 
+    {\begin{tabularx}{\linewidth}[t]{l X r@{\hspace{-4pt}}}
+        \adjustbox{valign=t}{\large Docker} & & \adjustbox{valign=t}{\skill{3}}
         \\
-        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Kubernetes} & & \adjustbox{valign=t}{\skill{2}} & 
+        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Kubernetes} & & \adjustbox{valign=t}{\skill{2}}
         \\
-        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Git} & & \adjustbox{valign=t}{\skill{3}} & 
+        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Git} & & \adjustbox{valign=t}{\skill{3}}
         \\
-        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large \LaTeX} & & \adjustbox{valign=t}{\skill{3}} & 
+        \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large \LaTeX} & & \adjustbox{valign=t}{\skill{3}}
         \\
     \end{tabularx}}
     \\
@@ -173,13 +175,17 @@
 
 
 \section*{Talen}
-\hspace{4pt}\begin{tabularx}{\lwmpad}{p{\hlwmpad} X p{\hlwmpad}}
-    \adjustbox{valign=t}{\large Nederlands} \hfill \adjustbox{valign=t}{\skill{5}} & &
+% \hspace{4pt}
+\begin{tabularx}{\linewidth}{p{\hlwmpad} X p{\hlwmpad}}
+    % for some reason the alignment wasn't quite perfect so I had to use inner tabularx again (and it's still not perfect :()
+    {\begin{tabularx}{\linewidth}[t]{l X r@{\hspace{-4pt}}}
+        \adjustbox{valign=t}{\large Nederlands} & & \adjustbox{valign=t}{\skill{5}} \\
+    \end{tabularx}} & &
     \adjustbox{valign=t}{\color{gray} moedertaal} \\
-    % \\
-    \rule{0pt}{0.69cm}\adjustbox{valign=t}{\large Engels} \hfill \adjustbox{valign=t}{\skill{5}} & &
+    \rule{0pt}{0.69cm}{\begin{tabularx}{\linewidth}[t]{l X r@{\hspace{-4pt}}}
+        \adjustbox{valign=t}{\large Engels} & & \adjustbox{valign=t}{\skill{5}} \\
+    \end{tabularx}} & &
     \adjustbox{valign=t}{\color{gray} vloeiend} \\
-    % \\
 \end{tabularx}
 
 
